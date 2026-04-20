@@ -110,7 +110,7 @@ def validate_data(df):
     print("\n--- Starting Validation Phase ---")
     validation_passed = True
     
-    # TODO: 1. Range Check
+    # 1. Range Check
     # Business Rule: Total amount must be greater than 0.
     # Check if any row has a total_amount <= 0.
     mask = safe_numeric_filter(df, 'total_amount', lambda x: x <= 0)
@@ -124,7 +124,7 @@ def validate_data(df):
     else:
         print("Range Check: PASSED")
 
-    # TODO: 2. Regex Format Check (Email)
+    # 2. Regex Format Check (Email)
     # Business Rule: Emails must contain an '@' symbol and a valid domain format.
     # We use a Regular Expression (Regex) pattern to check this.
     email_pattern = r'^[\w\.-]+@[\w\.-]+\.\w+$'
@@ -139,9 +139,23 @@ def validate_data(df):
         print(f"VALIDATION FAILED: Found {len(invalid_emails)} row(s) with invalid email formats!")
         print(invalid_emails[['order_id', 'email']])
         validation_passed = False
+        
     else:
          print("Regex Email Check: PASSED")
 
+    # TODO: 3. Null Value Check
+    # Business Rule: All records must have a phone number on file.
+    # Check if any row in the 'phone' column contains a missing (NaN) value.
+    # Hint: Pandas has a method called .isna() or .isnull()
+    
+    # invalid_phones = 
+    
+    # if not invalid_phones.empty:
+    #     print(f"VALIDATION FAILED: Found {len(invalid_phones)} row(s) missing phone numbers!")
+    #     validation_passed = False
+    # else:
+    #     print("Phone Number Check: PASSED")
+    #TODO: Finally - If validation fails, simulate a dead letter queue by Printing out a failure message, with some way to identify what failed. 
     return validation_passed
 
 # ---------------------------------------------------------
