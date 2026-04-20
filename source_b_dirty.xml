@@ -1,0 +1,56 @@
+<orders>
+    <order>
+        <orderId>ORD-99824</orderId>
+        <timestamp>2026-04-12T09:15:00Z</timestamp>
+        <customer>
+            <id>CUST-882</id>
+            <profile>
+                <firstName>Marcus</firstName>
+                <lastName>Chen</lastName>
+                <contact>
+                    <email>m.chen@example.com</email>
+                    <phone>+44 7700 900123</phone>
+                </contact>
+            </profile>
+        </customer>
+        <payment>
+            <method>PayPal</method>
+            <amount currency=" gbp ">89.99</amount>
+        </payment>
+    </order>
+    <order>
+        <orderId>ORD-99826</orderId>
+        <timestamp>2026-04-12T10:00:00Z</timestamp>
+        <customer>
+            <id>CUST-883</id>
+            <profile>
+                <firstName>John</firstName>
+                <lastName>Doe</lastName>
+                <!-- Missing contact info entirely to test null handling -->
+            </profile>
+        </customer>
+        <payment>
+            <method>Credit Card</method>
+            <amount currency="EUR">0.00</amount>
+        </payment>
+    </order>
+    <order>
+        <orderId>ORD-99827</orderId>
+        <timestamp>2026-04-12T11:30:00Z</timestamp>
+        <customer>
+            <id>CUST-884</id>
+            <profile>
+                <firstName>Jane</firstName>
+                <lastName>Doe</lastName>
+                <contact>
+                    <email>jane.doe@example.com</email>
+                    <phone>+44 7700 900125</phone>
+                </contact>
+            </profile>
+        </customer>
+        <payment>
+            <method>Bank Transfer</method>
+            <amount currency="GBP">120.00</amount>
+        </payment>
+    </order>
+</orders>

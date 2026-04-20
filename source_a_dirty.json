@@ -1,0 +1,20 @@
+[
+  {
+    "orderId": "ORD-99823",
+    "timestamp": "2026-04-11T11:30:00Z",
+    "customer": { "id": "CUST-445", "profile": { "firstName": "Elena", "lastName": "Rostova", "contact": { "email": "elena.r@example.com", "phone": "+44 7700 900077" } } },
+    "payment": { "method": "Credit Card", "amount": { "currency": "GBP", "total": 145.50 } }
+  },
+  {
+    "orderId": "ORD-99823",
+    "timestamp": "2026-04-11T11:30:00Z",
+    "customer": { "id": "CUST-445", "profile": { "firstName": "Elena", "lastName": "Rostova", "contact": { "email": "elena.r@example.com", "phone": "+44 7700 900077" } } },
+    "payment": { "method": "Credit Card", "amount": { "currency": "GBP", "total": 145.50 } }
+  },
+  {
+    "orderId": "ORD-99825",
+    "timestamp": "2026-04-11T14:20:00Z",
+    "customer": { "id": "CUST-447", "profile": { "firstName": "Sarah", "lastName": "Smith", "contact": { "email": "sarah.invalid-email.com", "phone": "+44 7700 900079" } } },
+    "payment": { "method": "Debit Card", "amount": { "currency": " usd ", "total": -50.00 } }
+  }
+]
