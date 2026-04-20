@@ -103,9 +103,7 @@ Scroll down to the validate\_data(df) function and add the following checks:
 * **Your Task:** Check if any row in the phone column contains a missing (NaN) value. If it does, print an error and set validation\_passed \= False.  
 * *Hint:* Pandas has a method called .isna().
 
-invalid\_phones \= df\[ df\['phone'\].isna() \]
 
-* 
 
 ### **TODO 6: Allowed Values Check (Currencies)**
 
@@ -113,11 +111,8 @@ invalid\_phones \= df\[ df\['phone'\].isna() \]
 * **Your Task:** Check if any cleaned currency falls outside of this approved list.  
 * *Hint:* Use a list of approved currencies and the .isin() method combined with the \~ (NOT) operator.
 
-approved\_currencies \= \['GBP', 'USD', 'EUR'\]
 
-invalid\_currencies \= df\[ \~df\['currency'\].isin(approved\_currencies) \]
 
-* 
 
 ### **TODO 7: String Prefix Check (Order IDs)**
 
@@ -125,9 +120,9 @@ invalid\_currencies \= df\[ \~df\['currency'\].isin(approved\_currencies) \]
 * **Your Task:** Check if any order\_id fails to start with this prefix.  
 * *Hint:* Pandas string columns have a .str.startswith() method.
 
-invalid\_orders \= df\[ \~df\['order\_id'\].str.startswith('ORD-') \]
 
-* 
+
+  
 
 ## **Part 5: Run and Verify**
 
@@ -138,7 +133,7 @@ Once you have completed the cleaning TODOs and added your new validation rules, 
 
 python DataWranglePipeline\_Phases1\_2\_3.py
 
-3. 
+
 
 **Goal:** If you successfully cleaned the data and wrote correct validation rules, the Validation gatekeeper will let the data pass, and your console should output the cleaned DataFrame along with this message:
 
