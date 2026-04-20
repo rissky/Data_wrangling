@@ -148,14 +148,40 @@ def validate_data(df):
     # Check if any row in the 'phone' column contains a missing (NaN) value.
     # Hint: Pandas has a method called .isna() or .isnull()
     
-    # invalid_phones = 
+    # invalid_phones = YOUR CODE HERE
     
     # if not invalid_phones.empty:
     #     print(f"VALIDATION FAILED: Found {len(invalid_phones)} row(s) missing phone numbers!")
     #     validation_passed = False
     # else:
     #     print("Phone Number Check: PASSED")
-    #TODO: Finally - If validation fails, simulate a dead letter queue by Printing out a failure message, with some way to identify what failed. 
+    # TODO: 4. Allowed Values Check
+    # Business Rule: We only accept payments in 'GBP', 'USD', or 'EUR'.
+    # Check if any cleaned currency falls outside of this approved list.
+    # Hint: You can use the .isin() method and the ~ (not) operator!
+    
+    # approved_currencies = ['GBP', 'USD', 'EUR']
+    # invalid_currencies = YOUR CODE HERE
+    
+    # if not invalid_currencies.empty:
+    #     print(f"VALIDATION FAILED: Found {len(invalid_currencies)} row(s) with unapproved currencies!")
+    #     validation_passed = False
+    # else:
+    #     print("Currency Allow-list Check: PASSED")
+    # TODO: 5. String Prefix Check
+    # Business Rule: All Order IDs must begin with the prefix "ORD-".
+    # Check if any order_id fails to start with this prefix.
+    # Hint: Pandas string columns have a .str.startswith() method.
+    
+    # invalid_orders = YOUR CODE HERE
+    
+    # if not invalid_orders.empty:
+    #     print(f"VALIDATION FAILED: Found {len(invalid_orders)} row(s) with invalid Order IDs!")
+    #     validation_passed = False
+    # else:
+    #     print("Order ID Prefix Check: PASSED")
+    # TODO: Finally - If validation fails at all, simulate a dead letter queue by Printing out a failure message, with some way to identify what failed. 
+    # If you're finished early, or just want to play - when we print out the dlq members, say why they failed.  
     return validation_passed
 
 # ---------------------------------------------------------
